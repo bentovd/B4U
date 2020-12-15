@@ -51,7 +51,7 @@
                         <div class="img-holder"></div>
                         <div class="main">
                             <h2>מלאו את הטופס ונחזור אליכם בהקדם:</h2>
-                            <form style="display: inline-block;">
+                            <form action="/action_page.php" method="get" id="form1" style="display: inline-block;"> 
                                 <label for="name" style="font-size: 16px;">שם פרטי (חובה)</label>
                                 <input type="text" id="name" name="name"> <br><br>
                                 <label for="Lname" style="font-size: 16px;">שם משפחה (חובה)</label>
@@ -63,7 +63,9 @@
                                 <label for="req" style="vertical-align: top; font-size: 16px;"> פנייה</label> 
                                 <textarea id="req" name="req" rows="4" cols="50" style="height: 200px; float: inline-end;"></textarea>                            
                             </form>
-                            <img src="nicePic.jpeg" alt="nice picture" style="height:400px">
+                            <img src="nicePic.jpeg" alt="nice picture" style="height:400px"> <br>
+                            <button type="submit" form="form1" value="Submit" style="width: 50px; margin-right: 300px;">שלח</button>
+                            
                         </div>      
                         </div>
                     </div>
