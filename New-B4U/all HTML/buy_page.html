@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html dir="rtl">
+    <head>
+        <title>Bekini4U</title>
+        <link rel="stylesheet" href="stylesheet_B4U.css">
+        <script>
+        function increaseValue() {
+            var value = parseInt(document.getElementById('number').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('number').value = value;
+          }
+          
+          function decreaseValue() {
+            var value = parseInt(document.getElementById('number').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value < 1 ? value = 1 : '';
+            value--;
+            document.getElementById('number').value = value;
+          }
+          
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+			<div class="mini_gap"></div>
+			<div class="toolBar">
+			    <img  src="cart.jpeg" alt="no image now" style="width: 50px; height: 50px;">
+                <div class="barText" style="font-weight: 500;"></div>
+			</div>
+            <div class="filter">
+                <fieldset style="margin-left:50px ;">
+                    <legend>הוסף לסל:</legend>
+                    <label><p style="font-size: 17px;"> מחיר: <br> <b>199 ש"ח</b> </p></label><br>
+                    <label for="color">צבע:</label>
+                    <select id="color" name="color" style="display:block;">
+                        <option value="Red">אדום</option>
+                        <option value="Yellow">צהוב</option>
+                        <option value="Blue">בחול</option>
+                        <option value="Green">ירוק</option>
+                    </select>
+                    <label for="size">מידה:</label>
+                    <select id="size" name="size" style="display:block;">
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
+                    <label for="quantity">כמות:</label><br>
+                    <form class="form_pm">
+                        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                        <input type="number" id="number" value="0" />
+                        <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                    </form>
+                    <button >הוסף</button>
+                </fieldset>
+            </div>
+            <div class="headerImg">
+                <div class="row">
+                    <img src="imgs/img2.jpg" id="img1" style="display:block; margin:auto; height:600px; width:450px;">
+                    <script>
+                        document.getElementById('img1').src = localStorage.something;
+                    </script>
+                </div>
+            </div>
+            <div class="main">
+            </div>
+            <div class="item1"></div>
+            <div class="item2"></div>
+            <div class="footer">
+                <div class="footer_content">
+                    <p >חפשו אותנו:</p>
+                    <a  href="https://www.instagram.com/bikini4u_/" target="_blank" onmouseout="this.style.backgroundColor='transparent'" onmouseover="this.style.backgroundColor='transparent'"> <img src="insta.jpeg" alt="no image now" style="width: 30px; height: 30px;" > </a>
+                    <a  href="https://www.facebook.com/hodaya.eluz" target="_blank" onmouseout="this.style.backgroundColor='transparent'" onmouseover="this.style.backgroundColor='transparent'"> <img src="facebook.png" alt="no image now" style="width: 30px; height: 30px;"> </a>
+                </div> 
+            </div>
+        </div>  
+    </body>
+</html>
+
+
