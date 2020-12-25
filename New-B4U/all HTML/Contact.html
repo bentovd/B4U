@@ -8,7 +8,7 @@
     </head>
     <body>
         <div class="wrapper">
-			<div class="mini_gap"> <div class="login" onclick="location.href='Login.html'"> Login </div></div>
+			<div class="mini_gap"></div>
 			<div class="toolBar">
 			    <img class="barText" src="../simbles/cart.jpeg" alt="no image now" style="width: 50px; height: 50px;">
                 <div class="barText" onclick="location.href='B4U.html'" >דף הבית</div>
@@ -49,19 +49,20 @@
                 <div class="row">
                     <div style="display: inline;"> 
                         <div class="img-holder"></div>
-                        <div class="main2">
+                        <div class="main2" style="font-family: Arial, Helvetica, sans-serif;">
                             <h2 style="font-family: Arial, Helvetica, sans-serif;">מלאו את הטופס ונחזור אליכם בהקדם:</h2>
-                            <form style="display: inline-block;">
+                            <div id="error"></div>
+                            <form id="form" style="display: inline-block;">
                                 <label for="name" style="font-size: 16px;">שם פרטי (חובה)</label>
-                                <input type="text" id="name" name="name"> <br><br>
+                                <input type="text" id="name" name="name" required> <br><br>
                                 <label for="Lname" style="font-size: 16px;">שם משפחה (חובה)</label>
-                                <input type="text" id="Lname" name="Lname" ><br><br>
+                                <input type="text" id="Lname" name="Lname" required ><br><br>
                                 <label for="phone" style="font-size: 16px;">טלפון </label>
-                                <input type="number" id="phone" name="phone"> <br> <br>
+                                <input type="tel" id="phone" name="phone" required> <br> <br>
                                 <label for="mail" style="font-size: 16px;"> מייל</label>
-                                <input type="text" id="mail" name="mail"> <br> <br> 
-                                <label for="req" style="vertical-align: top; font-size: 16px;"> פנייה</label> 
-                                <textarea id="req" name="req" rows="4" cols="50" style="height: 200px; float: inline-end;"></textarea>                            
+                                <input type="text" id="mail" name="mail" required> <br> <br> 
+                                <label for="req" style="vertical-align: top; font-size: 16px;"> פנייה</label>   
+                                <textarea class="textbox" id="req" name="req" rows="4" cols="50" style="height: 200px; float: inline-end;" required></textarea>                            
                             </form>
                             <img src="../moodPic/nicePic.jpeg" alt="nice picture" style="height:400px"> <br><br>
                             <button type="submit" form="form1" value="Submit" style="width: 50px; margin-right: 300px;">שלח</button>
@@ -94,6 +95,6 @@
              </div>
 
         </div> 
-	<script src="../B4U_js.js"> </script>
+
     </body>
 </html>
