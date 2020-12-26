@@ -3,304 +3,45 @@
     <head>
         <title>Bekini4U</title>
         <link rel="stylesheet" href="../stylesheet_B4U.css">
+        <script src="../B4U_js.js"></script>
         <script>
+            function saveSRC(el){
+                var pic_src = el;
+                localStorage.something = pic_src; 
+            }
         </script>
     </head>
     <body>
+        <script>
+            window.onload = function() {
+                placeImage(40,'all_models');
+                placeFilter();
+                Toolbardesign('',"font-weight: 500;",'','','',"toolB2");
+                search_us()
+            };
+        </script>
         <div class="wrapper">
-			<div class="mini_gap"><div class="login" onclick="location.href='Login.html'"> Login </div></div>
+            <div class="mini_gap">
+                <div class="login" onclick="location.href='Login.html'"> Login </div>
+            </div>
 			<div class="toolBar">
-			    <img class="barText" src="../simbles/cart.jpeg" alt="no image now" style="width: 50px; height: 50px;">
-                <div class="barText" onclick="location.href='B4U.html'" >דף הבית</div>
-                <div class="barText" onclick="location.href='Swimsuits.html'" style="font-weight: 500;">בגדי ים</div>
-                <div class="barText" onclick="location.href='Boys.html'">בנים</div>
-                <div class="barText" onclick="location.href='STable.html'">טבלת מידות</div>
-                <div class="barText" onclick="location.href='Contact.html'">צור קשר</div>
+                <span id="toolB2"></span>
             </div>
-            <div class="filter">
-                <form action="">
-                    <fieldset>
-                      <legend>סינון:</legend>
-                      <label for="color">צבע:</label>
-                      <select id="color" name="color" style="display:block;">
-                          <option value="Red">אדום</option>
-                          <option value="Yellow">צהוב</option>
-                          <option value="Blue">בחול</option>
-                          <option value="Green">ירוק</option>
-                      </select>
-                      <label for="size">מידה:</label>
-                      <select id="size" name="size" style="display:block;">
-                          <option value="XS">XS</option>
-                          <option value="S">S</option>
-                          <option value="M">M</option>
-                          <option value="L">L</option>
-                      </select>
-                      <label for="max">מחיר מקסימאלי:</label><br>
-                      <input type="text" id="max" name="max" value="100"><br>
-                      <label for="min">מחיר מינימאלי:</label><br>
-                      <input type="text" id="min" name="min" value="0"><br><br>
-                      <button>סנן</button>
-                  </form>
-            </div>
+            <div class="filter" id="filter2"></div>
             <div class="headerImg">
                 <p class="salePageHeader">כל הדגמים</p>
                 <a href="Swimsuits.html" class="previous">&laquo; חזרה</a>
-                <div class="row">
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="..\pictures\all_models\all_models (1).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (2).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (3).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (4).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (5).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (6).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (7).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (8).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (9).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (10).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (11).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (12).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (13).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (14).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (15).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (16).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (17).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (18).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (19).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (20).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (21).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (22).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (23).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (24).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (25).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (26).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (27).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (28).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (29).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (30).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (31).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (32).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (33).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (34).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (35).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (36).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (37).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (38).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (39).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <img class="img-container2 img-preview" src="pictures\pictures\all_models\all_models (40).jpeg">
-                            <h2 onclick="location.href='allbody.html'"><span>הוסף לסל הקניות</span></h2>
-                        </div>
-                    </div>
+                <div style="display: inline;"> 
+                    <div id="row"></div>
                 </div>
             </div>
             <div class="item1"></div>
             <div class="item2"></div>
             <div class="footer">
                 <div class="footer_content">
-                    <p >חפשו אותנו:</p>
-                    <a  href="https://www.instagram.com/bikini4u_/" target="_blank" onmouseout="this.style.backgroundColor='transparent'" onmouseover="this.style.backgroundColor='transparent'"> <img src="../simbles/insta.jpeg" alt="no image now" style="width: 30px; height: 30px;" > </a>
-                    <a  href="https://www.facebook.com/hodaya.eluz" target="_blank" onmouseout="this.style.backgroundColor='transparent'" onmouseover="this.style.backgroundColor='transparent'"> <img src="../simbles/facebook.png" alt="no image now" style="width: 30px; height: 30px;"> </a>
+                    <span id= "modular_footer"> </span>
                 </div> 
             </div>
-           <script>
-            </script>
-
         </div>  
-	<script src="../B4U_js.js"> </script>
     </body>
 </html>
