@@ -32,7 +32,7 @@ function placeFilter(){ //create filter in page
         <select id="color" name="color" style="display:block;">
             <option value="Red">אדום</option>
             <option value="Yellow">צהוב</option>
-            <option value="Blue">בחול</option>
+            <option value="Blue">כחול</option>
             <option value="Green">ירוק</option>
         </select>
         <label for="size">מידה:</label>
