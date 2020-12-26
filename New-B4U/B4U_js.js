@@ -69,3 +69,27 @@ function Toolbardesign(str1,str2,str3,str4,str5,id1) {//create toolbar in page
   document.getElementById(id1).innerHTML = "<img  src=\"../simbles/cart.jpeg\" alt=\"no image now\" style=\"width: 50px; height: 50px;\">  <div class=\"barText\" onclick=\"location.href='B4U.html'\" style=\" " +str1+ " \">דף הבית</div>   <div class=\"barText\" onclick=\"location.href='Swimsuits.html'\" style=\"" +str2+ " \">בגדי ים</div>   <div class=\"barText\" onclick=\"location.href='Boys.html'\" style=\"" +str3+ " \">בנים</div>   <div class=\"barText\" onclick=\"location.href='STable.html'\" style=\"" +str4+ " \">טבלת מידות</div>   <div class=\"barText\" onclick=\"location.href='Contact.html'\" style=\"" +str5+ "\">צור קשר</div> ";
 }
 
+/*adding an input check for contact*/
+
+const name = document.getElementById('name')
+const Lname = document.getElementById('Lname')
+const phone = document.getElementById('phone')
+const email = document.getElementById('email')
+const form = document.getElementById('form')
+const error = document.getElementById('error')
+
+
+form.addEventListener('submit', (e)=>{
+    let massages = []
+    if( name.value=='' || name.value== null){
+        massages.push ('יש למלא שם פרטי')
+    }
+    if (name.value<2){ massages.push('יש למלא שם פרטי')}
+    if (Lname.value<2){ massages.push('יש למלא שם משפחה')}
+    if (phone.value<2){ massages.push('יש להכניס 10 ספרות')}
+    if (email.value ){ massages.push('יש להכניס כתובת אימייל')}
+
+    if (massages.length>0){
+    e.preventDefault
+    error.innerText=massages.join(',')
+}})
