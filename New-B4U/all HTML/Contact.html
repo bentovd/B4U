@@ -1,76 +1,73 @@
 <!DOCTYPE HTML>
 <html dir="rtl">
-    <head>
-        <title>Bekini4U</title>
-        <link rel="stylesheet" href="../stylesheet_B4U.css">
-        <script src="../B4U_js.js"></script>
-        </script>
-    </head>
-    <body>
-           <script>
-            window.onload = function() {
-                placeFilter();
-                Toolbardesign('','','','',"font-weight: 500; border-bottom: 4px solid rgb(148, 134, 116);","toolB5");
-                search_us();
-            }
-        </script>
-        <div class="wrapper">
-            <div class="mini_gap">
-                <div class="login" onclick="location.href='Login.html'"> Login </div>
-            </div>
-			<div class="toolBar">
-			    <span id="toolB5"></span> 
-            </div>
-            <div class="filter" id="filter2"></div>
-            <div class="headerImg">
-                <p class="salePageHeader">טופס יצירת קשר</p>
-                <a href="Swimsuits.html" class="previous">&laquo; חזרה</a>
-                <div class="row">
-                    <div style="display: inline;"> 
-                        <div class="img-holder"></div>
-                        <div class="main2" style="font-family: Arial, Helvetica, sans-serif;">
-                            <h2 style="font-family: Arial, Helvetica, sans-serif;">מלאו את הטופס ונחזור אליכם בהקדם:</h2>
-                            <div id="error"></div>
-                            <form id="form" method="POST" style="display: inline-block;">
-                                <label for="name" style="font-size: 16px;" >שם פרטי (חובה)</label>
-                                <input type="text" id="name" name="name" required> <br><br>
-                                <label for="Lname" style="font-size: 16px;">שם משפחה (חובה)</label>
-                                <input type="text" id="Lname" name="Lname" required ><br><br>
-                                <label for="phone" style="font-size: 16px;" > טלפון (חובה) </label>
-                                <input type="tel" id="phone" name="phone"required > <br> <br>
-                                <label for="mail" style="font-size: 16px;"> מייל (חובה)</label>
-                                <input type="email" id="mail" name="mail"required > <br> <br> 
-                                <label for="req" style="vertical-align: top; font-size: 16px;"> פנייה</label>   
-                                <textarea class="textbox" id="req" name="req" rows="4" cols="50" style="height: 200px; float: inline-end;" required></textarea>                            
-                            </form>
-                            <img src="../moodPic/nicePic.jpeg" alt="nice picture" style="height:400px"> <br><br>
-                            <button type="submit" form="form" value="submit" style="width: 50px; margin-right: 300px;">שלח</button>
-                        </div>      
+<head>
+    <title>Bekini4U</title>
+    <link rel="stylesheet" href="../stylesheet_B4U.css">
+    <script src="../B4U_js.js"></script>
+    </script>
+</head>
+<body>
+    <script>
+        window.onload = function () {
+            placeFilter();
+            Toolbardesign('', '', '', '', "font-weight: 500; border-bottom: 4px solid rgb(148, 134, 116);", "toolB5");
+            search_us();
+        }
+    </script>
+    <div class="wrapper">
+        <div class="mini_gap">
+            <div class="login" onclick="location.href='Login.html'"> Login </div>
+        </div>
+        <div class="toolBar">
+            <span id="toolB5"></span>
+        </div>
+        <div class="filter" id="filter2"></div>
+        <div class="headerImg">
+            <p class="salePageHeader">טופס יצירת קשר</p>
+            <a href="Swimsuits.html" class="previous">&laquo; חזרה</a>
+            <div class="row">
+                <div style="display: inline;">
+                    <div class="img-holder"></div>
+                    <div class="main2" style="font-family: Arial, Helvetica, sans-serif;">
+                        <h2 style="font-family: Arial, Helvetica, sans-serif;">מלאו את הטופס ונחזור אליכם בהקדם:</h2>
+                        <div id="error"></div>
+                        <form id="form" method="POST" style="display: inline-block;">
+                            <label for="name" style="font-size: 16px;">שם פרטי (חובה)</label>
+                            <input type="text" id="name" name="name" required> <br><br>
+                            <label for="Lname" style="font-size: 16px;">שם משפחה (חובה)</label>
+                            <input type="text" id="Lname" name="Lname" required><br><br>
+                            <label for="phone" style="font-size: 16px;"> טלפון (חובה) </label>
+                            <input type="tel" id="phone" name="phone" required> <br> <br>
+                            <label for="mail" style="font-size: 16px;"> מייל (חובה)</label>
+                            <input type="email" id="mail" name="mail" required> <br> <br>
+                            <label for="req" style="vertical-align: top; font-size: 16px;"> פנייה</label>
+                            <textarea class="textbox" id="req" name="req" rows="4" cols="50"
+                                style="height: 200px; float: inline-end;" required></textarea>
+                        </form>
+                        <img src="../moodPic/nicePic.jpeg" alt="nice picture" style="height:400px"> <br><br>
+                        <button type="submit" form="form" value="submit"
+                            style="width: 50px; margin-right: 300px;">שלח</button>
                     </div>
                 </div>
             </div>
         </div>
-            <div class="item1"></div>
-            <div class="item2"></div>
-           <script>
-                
-                document.getElementById("VV").onmouseover = function() {mouseOver()};
-                document.getElementById("VV").onmouseout = function() {mouseOut()};
-
-                function mouseOver() {
-                document.getElementById("VV").style.color = "red";}
-
-                function mouseOut() {
-                document.getElementById("VV").style.color = "black";}
-                   
-            </script>
-            <div class="footer">
-                <div class="footer_content">
-                   <span id= "modular_footer" > </span> 
-                </div>
-             </div>
-
-        </div> 
-
-    </body>
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <script>
+            document.getElementById("VV").onmouseover = function () { mouseOver() };
+            document.getElementById("VV").onmouseout = function () { mouseOut() };
+            function mouseOver() {
+                document.getElementById("VV").style.color = "red";
+            }
+            function mouseOut() {
+                document.getElementById("VV").style.color = "black";
+            }
+        </script>
+        <div class="footer">
+            <div class="footer_content">
+                <span id="modular_footer"> </span>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
