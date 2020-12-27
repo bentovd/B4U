@@ -1,46 +1,46 @@
 <!DOCTYPE HTML>
 <html dir="rtl">
-    <head>
-        <title>Bekini4U</title>
-        <link rel="stylesheet" href="../stylesheet_B4U.css">
-        <script src="../B4U_js.js"></script>
-        <script>
-            function saveSRC(el){
-                var pic_src = el;
-                localStorage.something = pic_src; 
-            }
-        </script>
-    </head>
-    <body>
-        <script>
-            window.onload = function() {
-                placeImage(40,'boys');
-                placeFilter();
-                Toolbardesign('','',"font-weight: 500; border-bottom: 4px solid rgb(148, 134, 116);",'','',"toolB3");
-                search_us();
-            }
-        </script>
-        <div class="wrapper">
-            <div class="mini_gap">
-                <div class="login" onclick="location.href='Login.html'"> Login </div>
+<head>
+    <title>Bekini4U</title>
+    <link rel="stylesheet" href="../stylesheet_B4U.css">
+    <script src="../B4U_js.js"></script>
+    <script>
+        function saveSRC(el) {
+            var pic_src = el;
+            localStorage.something = pic_src;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        window.onload = function () {
+            placeImage(40, 'boys');
+            placeFilter();
+            Toolbardesign('', '', "font-weight: 500; border-bottom: 4px solid rgb(148, 134, 116);", '', '', "toolB3");
+            search_us();
+        }
+    </script>
+    <div class="wrapper">
+        <div class="mini_gap">
+            <div class="login" onclick="location.href='Login.html'"> Login </div>
+        </div>
+        <div class="toolBar">
+            <span id="toolB3"></span>
+        </div>
+        <div class="filter" id="filter2"></div>
+        <div class="headerImg">
+            <p class="salePageHeader">בנים</p>
+            <div style="display: inline;">
+                <div id="row"></div>
             </div>
-			<div class="toolBar">
-                <span id="toolB3"></span>
+        </div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="footer">
+            <div class="footer_content">
+                <span id="modular_footer"> </span>
             </div>
-            <div class="filter" id="filter2"></div>
-            <div class="headerImg">
-                <p class="salePageHeader">בנים</p>
-                <div style="display: inline;"> 
-                    <div id="row"></div>
-                </div>
-            </div>
-            <div class="item1"></div>
-            <div class="item2"></div>
-            <div class="footer">
-                <div class="footer_content">
-                    <span id= "modular_footer"> </span>
-                </div> 
-            </div>
-        </div>  
-    </body>
+        </div>
+    </div>
+</body>
 </html>
