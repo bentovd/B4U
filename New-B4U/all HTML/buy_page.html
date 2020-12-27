@@ -1,68 +1,77 @@
 <!DOCTYPE HTML>
 <html dir="rtl">
-    <head>
-        <title>Bekini4U</title>
-        <link rel="stylesheet" href="../stylesheet_B4U.css">
-        <script src="../B4U_js.js"></script>
-    </head>
-    <body>
-        <script>
-            window.onload = function() {
-                placeFilter();
-                Toolbardesign('',"font-weight: 500; border-bottom: 4px solid rgb(148, 134, 116);",'','','',"toolB2");
-                search_us();
-            }
-        </script>
-        <div class="wrapper">
-            <div class="mini_gap">
-                <div class="login" onclick="location.href='Login.html'"> Login </div>
+
+<head>
+    <title>Bekini4U</title>
+    <link rel="stylesheet" href="../stylesheet_B4U.css">
+    <script src="../B4U_js.js"></script>
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+            placeFilter();
+            Toolbardesign('', "font-weight: 500; border-bottom: 4px solid rgb(148, 134, 116);", '', '', '', "toolB2");
+            search_us();
+        }
+    </script>
+    <div class="wrapper">
+        <div class="mini_gap">
+            <div class="login" onclick="location.href='Login.html'"> Login </div>
+        </div>
+        <div class="toolBar">
+            <span id="toolB2"></span>
+        </div>
+        <div class="filter" id="filter2"></div>
+        <div class="headerImg"
+            style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+            <fieldset style="display:inline-block; background-color: rgb(228, 211, 188);">
+                <legend style="width:120px; transform: none; background-color: rgb(148, 134, 116);">הוסף לסל:</legend>
+                <label>
+                    <p style="font-size: 17px;"> מחיר: <br> <b>199 ש"ח</b> </p>
+                </label><br>
+                <label for="color">צבע:</label>
+                <select id="color" name="color" style="display:block;">
+                    <option value="Red">אדום</option>
+                    <option value="Yellow">צהוב</option>
+                    <option value="Blue">בחול</option>
+                    <option value="Green">ירוק</option>
+                </select>
+                <label for="size">מידה:</label>
+                <select id="size" name="size" style="display:block;">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+                <label for="quantity">כמות:</label><br>
+                <form class="form_pm">
+                    <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value"
+                        style="background-color: rgb(148, 134, 116);"><b>-</b></div>
+                    <input type="number" id="number" value="0" />
+                    <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value"
+                        style="background-color: rgb(148, 134, 116);"><b>+</b></div>
+                </form>
+                <button style="background-color: rgb(148, 134, 116);">הוסף</button>
+            </fieldset>
+            <div class="row" style="display:inline-block;">
+                <img src="imgs/img2.jpg" id="img1"
+                    style="display:inline-block; margin:auto; height:600px; width:450px;">
+                <script>
+                    document.getElementById('img1').src = localStorage.something;
+                </script>
             </div>
-			<div class="toolBar">
-                <span id="toolB2"></span>
+        </div>
+        <div class="main">
+        </div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="footer">
+            <div class="footer_content">
+                <span id="modular_footer"> </span>
             </div>
-            <div class="filter" id="filter2"></div>
-            <div class="headerImg" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-                <fieldset style="display:inline-block; background-color: rgb(228, 211, 188);">
-                    <legend style="width:120px; transform: none; background-color: rgb(148, 134, 116);">הוסף לסל:</legend>
-                    <label><p style="font-size: 17px;"> מחיר: <br> <b>199 ש"ח</b> </p></label><br>
-                    <label for="color" >צבע:</label>
-                    <select id="color" name="color" style="display:block;">
-                        <option value="Red">אדום</option>
-                        <option value="Yellow">צהוב</option>
-                        <option value="Blue">בחול</option>
-                        <option value="Green">ירוק</option>
-                    </select>
-                    <label for="size">מידה:</label>
-                    <select id="size" name="size" style="display:block;">
-                        <option value="XS">XS</option>
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                    </select>
-                    <label for="quantity">כמות:</label><br>
-                    <form class="form_pm">
-                        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value" style="background-color: rgb(148, 134, 116);"><b>-</b></div>
-                        <input type="number" id="number" value="0" />
-                        <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value" style="background-color: rgb(148, 134, 116);"><b>+</b></div>
-                    </form>
-                    <button style="background-color: rgb(148, 134, 116);">הוסף</button>
-                </fieldset>
-                <div class="row" style="display:inline-block;">
-                    <img src="imgs/img2.jpg" id="img1" style="display:inline-block; margin:auto; height:600px; width:450px;">
-                    <script>
-                        document.getElementById('img1').src = localStorage.something;
-                    </script>
-                </div>
-            </div>
-            <div class="main">
-            </div>
-            <div class="item1"></div>
-            <div class="item2"></div>
-            <div class="footer">
-                <div class="footer_content">
-                    <span id= "modular_footer"> </span>
-                </div> 
-            </div>
-        </div>  
-    </body>
+        </div>
+    </div>
+</body>
+
 </html>
