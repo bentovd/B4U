@@ -3,70 +3,45 @@
     <head>
         <title>Bekini4U</title>
         <link rel="stylesheet" href="../stylesheet_B4U.css">
+        <script src="../B4U_js.js"></script>
         <script>
+            function saveSRC(el){
+                var pic_src = el;
+                localStorage.something = pic_src; 
+            }
         </script>
     </head>
-        <body>
+    <body>
         <script>
             window.onload = function() {
+                placeImage(40,'boys');
                 placeFilter();
                 Toolbardesign('','',"font-weight: 500; border-bottom: 4px solid rgb(148, 134, 116);",'','',"toolB3");
                 search_us();
             }
         </script>
         <div class="wrapper">
-			<div class="mini_gap">
-			    <div class="login" onclick="location.href='Login.html'"> Login </div>
-			</div>
+            <div class="mini_gap">
+                <div class="login" onclick="location.href='Login.html'"> Login </div>
+            </div>
 			<div class="toolBar">
-			   <span id="toolB3"></span> 
-			</div>
+                <span id="toolB3"></span>
+            </div>
             <div class="filter" id="filter2"></div>
             <div class="headerImg">
-                <div class="row">
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <a href="all_models.html"><img class="img-container img-preview" src="../pictures/all_models/all_models (36).jpeg"></a>
-                            <h3 onclick="location.href='all_models.html'"><span>כל הדגמים</span></h3>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <a href="full_body.html"><img class="img-container img-preview" src="../pictures/full_body\full_body (2).jpeg"></a>
-                            <h3 onclick="location.href='full_body.html'"><span>שלמים</span></h3>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <a href="bikini.html"><img class="img-container img-preview" src="../pictures/bikini\bikini (16).jpeg"></a>
-                            <h3 onclick="location.href='bikini.html'"><span>ביקיני</span></h3>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <a href="long_sleeve.html"><img class="img-container img-preview" src="../pictures/long_sleeve\long_sleeve (3).jpeg"></a>
-                            <h3 onclick="location.href='long_sleeve.html'"><span>שרוול ארוך</span></h3>
-                        </div>
-                    </div>
-                    <div style="display: inline;"> 
-                        <div class="img-holder">
-                            <a href="top_sales.html"><img class="img-container img-preview" src="../pictures/top_sales\top_sales (6).jpeg"></a>
-                            <h3><span onclick="location.href='top_sales.html'">הכי נמכרים</span></h3>
-                        </div>
-                    </div>
+                <p class="salePageHeader">בנים</p>
+                <a href="Swimsuits.html" class="previous">&laquo; חזרה</a>
+                <div style="display: inline;"> 
+                    <div id="row"></div>
                 </div>
-            </div>
-            <div class="main">
-                <p class=imgText style="padding-right: 20px"> תמונות נוספות</p>
             </div>
             <div class="item1"></div>
             <div class="item2"></div>
             <div class="footer">
                 <div class="footer_content">
-                    <span id= "modular_footer" > </span> 
+                    <span id= "modular_footer"> </span>
                 </div> 
             </div>
-        </div> 
-	    <script src="../B4U_js.js"> </script>
+        </div>  
     </body>
 </html>
