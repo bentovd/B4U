@@ -603,3 +603,8 @@ label{width: 140px;
       -webkit-appearance: none;
       margin: 0;
   }
+
+    .textbox{
+resize: none;
+font-family: Arial, Helvetica, sans-serif;
+    }
