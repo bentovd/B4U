@@ -1,59 +1,59 @@
 <!DOCTYPE HTML>
 <html dir="rtl">
-    <head>
-        <title>Bekini4U</title>
-        <link rel="stylesheet" href="../stylesheet_B4U.css">
+
+<head>
+    <title>Bekini4U</title>
+    <link rel="stylesheet" href="../stylesheet_B4U.css">
+    <script>
+    </script>
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+            placeFilter();
+            Toolbardesign('', '', '', "font-weight: 500; border-bottom: 4px solid rgb(148, 134, 116);", '', "toolB4");
+            search_us();
+        }
+    </script>
+    <div class="wrapper">
+        <div class="mini_gap">
+            <div class="login" onclick="location.href='Login.html'"> Login </div>
+        </div>
+        <div class="toolBar">
+            <span id="toolB4"></span>
+        </div>
+        <div class="filter" id="filter2"></div>
+        <div class="headerImg">
+            <p class="salePageHeader">טבלת מידות</p>
+            <a href="Swimsuits.html" class="previous">&laquo; חזרה</a>
+            <div class="row">
+                <div style="display: inline;">
+                    <div class="img-holder"></div>
+                    <img src="../simbles/STPic.jpg">
+                    <img src="../moodPic/stp.jpg" style="width: 1100px;">
+                </div>
+            </div>
+        </div>
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="footer">
+            <div class="footer_content">
+                <span id="modular_footer"> </span>
+            </div>
+        </div>
         <script>
-        </script>
-    </head>
-   <body>
-        <script>
-            window.onload = function() {
-                placeFilter();
-                Toolbardesign('','','',"font-weight: 500; border-bottom: 4px solid rgb(148, 134, 116);",'',"toolB4");
-                search_us();
+            document.getElementById("VV").onmouseover = function () { mouseOver() };
+            document.getElementById("VV").onmouseout = function () { mouseOut() };
+            function mouseOver() {
+                document.getElementById("VV").style.color = "red";
+            }
+            function mouseOut() {
+                document.getElementById("VV").style.color = "black";
             }
         </script>
-        <div class="wrapper">
-			<div class="mini_gap"> <div class="login" onclick="location.href='Login.html'"> Login </div></div>
-			<div class="toolBar">
-			<span id="toolB4"></span> 
-            </div>
-            <div class="filter" id="filter2"></div>
-            <div class="headerImg">
-                <p class="salePageHeader">טבלת מידות</p>
-                <a href="Swimsuits.html" class="previous">&laquo; חזרה</a>
-                <div class="row">
-                    <div style="display: inline;"> 
-                        <div class="img-holder"></div>
-                            <img  src="../simbles/STPic.jpg">
-                            <img  src="../moodPic/stp.jpg" style="width: 1100px;">
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="item1"></div>
-            <div class="item2"></div>
-            <div class="footer">
-                <div class="footer_content">
-                      <span id= "modular_footer" > </span> 
-                </div>
-             </div>
-           <script>
-                
-                document.getElementById("VV").onmouseover = function() {mouseOver()};
-                document.getElementById("VV").onmouseout = function() {mouseOut()};
+    </div>
+    <script src="../B4U_js.js"> </script>
+</body>
 
-                function mouseOver() {
-                document.getElementById("VV").style.color = "red";}
-
-                function mouseOut() {
-                document.getElementById("VV").style.color = "black";}
-                   
-            </script>
-
-        </div>  
-	    <script src="../B4U_js.js"> </script>
-    </body>
 </html>
