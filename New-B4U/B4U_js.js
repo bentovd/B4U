@@ -25,7 +25,7 @@ function placeImage(num_of_photos,sheet){ //create given number of photos in giv
 
 function placeFilter(){ //create filter in page
   document.getElementById("filter2").innerHTML = `
-    <form action="" method="GET" style="position: sticky; top:10;">
+    <form action="" method="GET" style="position: sticky; top:0;">
       <fieldset>
         <legend>סינון:</legend>
         <label for="color">צבע:</label>
