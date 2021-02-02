@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block page_head_css_js %}
+<link rel="stylesheet" href="{{ url_for('static', filename= 'base.css') }}">
+<link rel="stylesheet" href="{{ url_for('cart.static', filename= 'cart.css') }}">
+<script src="{{ url_for('cart.static', filename='cart.js') }}"> </script>
+{% endblock %}
+
+
+{% block page_content %}
+<div class="main">
+    <div class="scroll_cart">
+        {% if orders %}
+            {% for order in orders %}
+                <div class="carts-products">
+                    <div class="products">
+                        <div class="product">
+                            <img class="img-container img-preview" src="{{ url_for('swimsuits.static',filename=order.path) }}">
+                            <div class="product-info">
+                                <h3 class="product-price">
+                                    <p>מחיר: {{order.price}}</p>
+                                </h3>
+                                <h3 class="product-quantity">
+                                    <p>כמות: {{order.quantity}}</p>
+                                </h3>
+                                <h3 class="product-size"  id="cart-quantity">
+                                    <p>מידה: {{order.size}}</p>
+                                </h3>
+                                <div >
+                                    <form action="/cart" method="POST">
+                                        <span class="remove"></span>
+                                        <input type="hidden" name="makat" id="makat" value="{{order.makat}}">
+                                        <input type="hidden" name="size" id="size" value="{{order.size}}">
+                                        <input type="image" src="{{ url_for('cart.static',filename='cart_.jpeg') }}" alt="Submit Form" class="product-remove"/>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="total" >סה"כ {{total_cart[0].total}} ש"ח</div>
+            <form action="/cart/payment" METHOD="POST">
+                <button type="submit">המשך לתשלום</button>
+            </form>
+        {% else %}
+            <div>
+                <h2>לא נמצאו פריטים בעגלה שלך</h2>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
