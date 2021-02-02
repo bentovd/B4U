@@ -1,0 +1,7 @@
+<div class="toolBar">
+    <img src="{{ url_for('static',filename='simbles/cart.jpeg') }}" alt="no image now" onclick="location.href='{{ url_for('cart.index')}}'" style="width: 50px; height: 50px; cursor: pointer">
+    <div class="barText" onclick="location.href='{{ url_for('B4U.index')}}'"{% if endpoint=='B4U.index' %} style="font-weight: 500; border-bottom: 4px solid rgb(148, 134, 116);" {%endif%}> דף הבית </div>
+    <div class="barText" onclick="location.href='{{ url_for('swimsuits.index')}}'" {% if endpoint=='swimsuits.index' %} style="font-weight: 500; border-bottom: 4px solid rgb(148, 134, 116);" {%endif%} >בגדי ים</div>
+    <div class="barText" onclick="location.href='{{ url_for('size_table.index')}}'" {% if endpoint=='size_table.index' %} style="font-weight: 500; border-bottom: 4px solid rgb(148, 134, 116);" {%endif%}>טבלת מידות</div>
+    <div class="barText" onclick="location.href='{{ url_for('contact.index')}}' " {% if endpoint=='contact.index' %} style="font-weight: 500; border-bottom: 4px solid rgb(148, 134, 116);" {%endif%}>צור קשר</div>
+</div>

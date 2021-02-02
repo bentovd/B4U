@@ -1,0 +1,33 @@
+<div class="filter" id="filter2">
+    <form action="{{category}}" method="GET">
+        <fieldset>
+            <legend>סינון:</legend>
+            <label for="color">צבע:</label>
+            <select id="color" name="color">
+                <option value="%">כל הצבעים</option>
+                <option value="אדום">אדום</option>
+                <option value="צהוב">צהוב</option>
+                <option value="כחול">כחול</option>
+                <option value="ירוק">ירוק</option>
+                <option value="ורוד">ורוד</option>
+                <option value="חום">חום</option>
+                <option value="לבן">לבן</option>
+                <option value="שחור">שחור</option>
+                <option value="צבעוני">צבעוני</option>
+            </select>
+            <label for="size">מידה:</label>
+            <select id="size" name="size">
+                <option value="makat">כל המידות</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <label for="max">מחיר מקסימאלי:</label><br>
+            <input type="text" id="max" name="max" value="1000"><br>
+            <label for="min">מחיר מינימאלי:</label><br>
+            <input type="text" id="min" name="min" value="0"><br><br>
+            <button type="submit">סנן</button>
+        </fieldset>
+    </form>
+</div>

@@ -1,0 +1,14 @@
+<div class="mini_gap">
+    {% if session.get('user') == 'אורח' %}
+        <div class="login" onclick="location.href='{{ url_for('login.index')}}'"> Login</div>
+    {% else %}
+        <div class="login2" onclick="location.href='{{ url_for('login.log_out')}}'">Logout</div>
+
+    {% endif %}
+
+    <span class="login" style="width: 150px">  שלום {{session.get('user')}} :) </span>
+
+
+
+</div>
+

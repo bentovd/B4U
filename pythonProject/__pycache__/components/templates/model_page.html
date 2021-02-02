@@ -1,0 +1,21 @@
+<a href="{{ url_for('swimsuits.index') }}" class="previous">&laquo; חזרה</a>
+<div>
+    <div id="row">
+{% if models %}
+        {% for model in models %}
+
+            <div style="display: inline;">
+                <div class="img-holder">
+                    <a href="{{ url_for('swimsuits.buy_page', makat=model.makat) }}" target="_blank"><img class="img-container2 img-preview" src="{{ url_for('swimsuits.static',filename= model.path) }}" ></a>
+                    <h2><span>פרטים נוספים</span></h2>
+                </div>
+            </div>
+
+        {% endfor %}
+
+    {% else %}
+        <p> לא נמצאו תוצאות עבור החיפוש שלך</p>
+    {% endif %}
+
+    </div>
+</div>
