@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block page_head_css_js %}
+    <link rel="stylesheet" href="{{ url_for('swimsuits.static', filename= 'swimsuit_style.css') }}">
+{% endblock %}
+
+
+{% block page_content %}
+<div class="headerImg">
+    <div class="row">
+        {% for category in categories %}
+        <div style="display: inline;">
+            <div class="img-holder">
+                <a href="{{ url_for(category[0]) }}"><img class="img-container img-preview"
+                                                                     src="{{ url_for('swimsuits.static', filename=category[1]) }}"></a>
+                <h3 onclick="location.href={{ category[2] }}"><span>{{category[3]}}</span></h3>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="main">
+    <p class=imgText></p>
+</div>
+
+{%  endblock %}

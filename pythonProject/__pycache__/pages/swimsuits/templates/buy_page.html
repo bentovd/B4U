@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+{% block page_head_css_js %}
+    <link rel="stylesheet" href="{{ url_for('swimsuits.static', filename= 'swimsuit_style.css') }}">
+    <script src="{{ url_for('swimsuits.static', filename='swimsuits.js') }}"></script>
+{% endblock %}
+
+
+{% block page_content %}
+<div class="headerImg">
+    <fieldset>
+        {% if add == True %}
+            <p class="added">v ההזמנה נוספה בהצלחה !</p>
+        {% endif %}
+        <form id="form" class="form_pm" action="/swimsuits/buy_page/{{model.makat}}" method="POST">
+            <legend class="title">הוסף לסל:</legend>
+            <label><h3> מחיר: <br> <b>{{model.price}} ש"ח</b></h3></label><br>
+            <label><h3> צבע: <br> <b>{{model.color}} </b></h3></label><br>
+            <label for="size">מידה:</label>
+            <select id="size" name="size">
+                {% if model.S>0 %}
+                    <option value="S">S</option>
+                {% endif %}
+                {% if model.M>0 %}
+                    <option value="M">M</option>
+                {% endif %}
+                {% if model.L>0 %}
+                    <option value="L">L</option>
+                {% endif %}
+                {% if model.XL>0 %}
+                    <option value="XL">XL</option>
+                {% endif %}
+            </select>
+            <label for="number">כמות:</label><br>
+            <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value"><b>-</b></div>
+            <input type="number" id="number" name="number" value="1">
+            <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value"><b>+</b></div>
+            <button type="submit" form="form" class="cart_button">הוסף לסל</button>
+        </form>
+    </fieldset>
+    <div class="row">
+        <img class="catelog" src="{{ url_for('swimsuits.static',filename= model.path) }}" id="img1">
+    </div>
+</div>
+<div class="main"> </div>
+
+
+{%  endblock %}
