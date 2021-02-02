@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>bikini website B4U , Bekini4U </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'base.css') }}">
+    {% block page_head_css_js %}
+    {% endblock %}
+</head>
+
+
+<body>
+
+    {% block page_type %}
+    <div class="wrapper">
+    {% include("login_bar.html") %}
+    {% include("tool_bar.html") %}
+
+        {% block page_content %}
+        {%  endblock %}
+
+
+    {% include("footer.html") %}
+    </div>
+    {% block javaS %}
+    {% endblock %}
+
+
+    {% endblock %}
+
+</body>
+</html>
