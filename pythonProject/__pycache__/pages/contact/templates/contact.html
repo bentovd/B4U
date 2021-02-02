@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block page_head_css_js %}
+    <link rel="stylesheet" href="{{ url_for('contact.static', filename= 'contact_style.css') }}">
+{% endblock %}
+
+{% block page_content %}
+<div class="headerImg">
+    <p class="salePageHeader">טופס יצירת קשר</p>
+    <div class="row">
+        <div class="img-holder"></div>
+        <div class="main2">
+            <h2>מלאו את הטופס ונחזור אליכם בהקדם:</h2>
+            <div id="error"></div>
+            {% if sent %}
+                <p class="accept_massage"> בקשתך נשלחה בהצלחה, נציגנו ישובו אלייך בהקדם</p>
+            {% endif %}
+            <form id="form" action="/contact" method="POST">
+                <label for="name">שם פרטי (חובה)</label>
+                <input type="text" id="name" name="name" pattern="[a-zA-Zא-ת]{2,20}" required> <br><br>
+                <label for="Lname">שם משפחה (חובה)</label>
+                <input type="text" id="Lname" name="Lname" pattern="[a-zA-Zא-ת]{2,20}" required><br><br>
+                <label for="phone"> טלפון (חובה) </label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="xxxxxxxxxx" required><br><br>
+                <label for="mail"> מייל (חובה)</label>
+                <input type="email" id="mail" name="mail" pattern=".+@.+[.].+" placeholder="example@gmail.com" required> <br><br>
+                <label for="req"> פנייה</label>
+                <textarea class="textbox" id="req" name="req" rows="4" cols="50" minlength="2" required></textarea> <br><br>
+                <button type="submit" form="form" value="submit">שלח </button>
+            </form>
+            <span>
+                <img src="{{ url_for('contact.static',filename='nicePic.jpeg') }}" alt="nice picture" class="img"> <br><br>
+            </span>
+        </div>
+    </div>
+</div>
+
+{%  endblock %}
