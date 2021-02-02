@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+{% block page_head_css_js %}
+    <link rel="stylesheet" href="{{ url_for('register.static', filename= 'register_style.css') }}">
+    <script src="{{ url_for('register.static', filename='register.js') }}"> </script>
+{% endblock %}
+
+
+
+{% block page_type %}
+    <img src="{{ url_for('register.static',filename='login_new.jpeg') }}">
+    <form class="box" action="/login" method="POST">
+        <h1>Register</h1>
+        <input type="text" name="username" placeholder="Username" minlength="2" required>
+        <input type="password" name="password" placeholder="Password" minlength="4" required>
+        <input type="password" name="rep_password" placeholder="Repeat Password" minlength="4" required>
+        <input type="submit" name="sub" placeholder="Register">
+        <a href="{{ url_for('login.index') }}" class="previous">&laquo; back</a>
+    </form>
+
+
+{% if status == '2' %}
+    <script> window.onload = function () { password_not_match(); } </script>
+{% endif %}
+
+{% if status == '1' %}
+    <script> window.onload = function () { not_exist(); } </script>
+{% endif %}
+
+{% endblock %}
+
+
+
+
+
+
