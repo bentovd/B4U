@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block page_head_css_js %}
+    <link rel="stylesheet" href="{{ url_for('B4U.static', filename= 'home_page_style.css') }}">
+{% endblock %}
+
+{% block page_content %}
+<div class="headerImg">
+    <div class="img-preview">
+        <div class="outer-wrapper">
+            <div class="s-wrap s-type-2" role="slider">
+                <ul class="s-content">
+                    <li class="s-item s-item-1"></li>
+                    <li class="s-item s-item-2"></li>
+                    <li class="s-item s-item-3"></li>
+                    <li class="s-item s-item-4"></li>
+                    <li class="s-item s-item-5"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="leftSidebar">
+    <p></p>
+</div>
+<div class="main">
+    <div>
+        {% for pic_array in pictures %}
+            <img class="img_homepage" src="{{ url_for('B4U.static',filename=pic_array[0]) }}"
+                 onmouseover="this.src='{{ url_for('B4U.static',filename= pic_array[1]) }}'"
+                onmouseout="this.src='{{ url_for('B4U.static',filename= pic_array[0])}}'">
+        {% endfor %}
+    </div>
+</div>
+
+{%  endblock %}
+
+
